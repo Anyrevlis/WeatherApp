@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="search">Search</string>
+    <string name="favorites">Favorites</string>
+    <string name="settings">Settings</string>
+    <string name="details">details</string>
+    <string name="min_max_temp">MIN/MAX</string>
+    <string name="temperature_icon">temperature_icon</string>
+    <string name="temp_placeholder">19° / 25°</string>
+    <string name="humidity_icon">humidity_icon</string>
+    <string name="wind_icon">wind_icon</string>
+    <string name="wind_text">WIND</string>
+    <string name="wind_placeholder">6 km/h (NW)</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="humidity_placeholder">37%</string>
+    <string name="pressure_icon">pressure_icon</string>
+    <string name="pressure">PRESSURE</string>
+    <string name="pressure_placeholder">1006 hPa</string>
+    <string name="visibility_icon">visibility_icon</string>
+    <string name="visibility">VISIBILITY</string>
+    <string name="visibility_placeholder">16 km</string>
+    <string name="accuracy_icon">accuracy_icon</string>
+    <string name="accuracy">ACCURACY</string>
+    <string name="_93">93%</string>
+    <string name="city_placeholder">Zagreb</string>
+    <string name="date_placeholder">23rd March</string>
+    <string name="time_placeholder">9:48pm</string>
+    <string name="weatherstate_placeholder">Rainy</string>
+    <string name="temperature_placeholder">39</string>
+    <string name="condition_icon">condition_icon</string>
+</resources>

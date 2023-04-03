@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- City Name -->
+        <TextView
+            android:id="@+id/cityNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeadlineMediumNLv1Left"
+            android:text="Zagreb" />
+
+        <!-- Current Time -->
+        <TextView
+            android:id="@+id/currentTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cityNameTextView"
+            style="@style/BodyMediumNLv2Left"
+            android:text="Current Time" />
+
+        <!-- Timezone -->
+        <TextView
+            android:id="@+id/timezoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currentTimeTextView"
+            style="@style/BodyMediumNLv2Left"
+            android:text="Timezone" />
+
+        <TextView
+            style="@style/DisplayLargeNLv1Right"
+            android:id="@+id/degreesTextView"
+            android:layout_width="36dp"
+            android:layout_height="32dp"
+            android:text="23"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Weather Icon -->
+        <ImageView
+            android:id="@+id/weatherIconImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icons_weather_c"
+            android:layout_toStartOf="@id/degreesTextView"
+            android:layout_centerVertical="true" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sublayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/HeadlineLargeNLv1Left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:id="@+id/city_name"
+        android:paddingBottom="16dp"
+        android:paddingHorizontal="16dp"
+        android:text="@string/city_placeholder" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/city_name">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_card"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/datetext"
+                    style="@style/HeadlineSmallNLv1Left"
+                    android:layout_width="144dp"
+                    android:layout_height="20dp"
+                    android:text="@string/date_placeholder" />
+
+                <TextView
+                    android:id="@+id/timetext"
+                    style="@style/HeadlineSmallNLv1Left"
+                    android:layout_width="144dp"
+                    android:layout_height="20dp"
+                    android:text="@string/time_placeholder" />
+
+                <TextView
+                    android:id="@+id/weather_description"
+                    style="@style/BodyMediumNLv2Left"
+                    android:layout_width="144dp"
+                    android:layout_height="20dp"
+                    android:text="@string/weatherstate_placeholder" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/temperature"
+                    style="@style/DisplayExtraLargeNLv1Right"
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/temperature_placeholder" />
+
+                <ImageView
+                    android:id="@+id/weather_icon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="15dp"
+                    android:contentDescription="@string/condition_icon"
+                    android:src="@drawable/icons_weather_s" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:elevation="5dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/firstrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/minmaxtemp_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/temp_image"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/temperature_icon"
+                                android:src="@drawable/icons_android_ic_thermostat"></ImageView>
+
+                            <TextView
+                                android:id="@+id/minmaxtemp_text"
+                                style="@style/DescriptionNLv2Center"
+                                android:layout_width="match_parent"
+                                android:layout_height="16dp"
+                                android:gravity="center"
+                                android:text="@string/min_max_temp">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/minmaxtemp_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/temp_placeholder"
+                                android:textSize="15sp">
+
+                            </TextView>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/wind_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/wind_icon"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/wind_icon"
+                                android:src="@drawable/icons_android_ic_wind">
+
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/wind_text"
+                                style="@style/DescriptionNLv2Center"
+                                android:layout_width="match_parent"
+                                android:layout_height="16dp"
+                                android:gravity="center"
+                                android:text="@string/wind_text">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/wind_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/wind_placeholder"
+                                android:textSize="15sp">
+
+                            </TextView>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/humidity_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/humidity_icon"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/humidity_icon"
+                                android:src="@drawable/icons_android_ic_humidity">
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/text_humidity"
+                                style="@style/DescriptionNLv2Center"
+                                android:layout_width="match_parent"
+                                android:layout_height="16dp"
+                                android:gravity="center"
+                                android:text="@string/humidity">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/text_humidity_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/humidity_placeholder"
+                                android:textSize="15sp"></TextView>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/minmaxtemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/pressure_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/pressure_icon"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/pressure_icon"
+                                android:src="@drawable/icons_android_ic_pressure">
+
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/text_pressure"
+                                style="@style/DescriptionNLv2Center"
+                                android:layout_width="match_parent"
+                                android:layout_height="16dp"
+                                android:gravity="center"
+                                android:text="@string/pressure">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/text_pressure_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/pressure_placeholder"
+                                android:textSize="15sp">
+
+                            </TextView>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/visibility_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/visibility_icon"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/visibility_icon"
+                                android:src="@drawable/icons_android_ic_visibility">
+
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/text_visibility"
+                                style="@style/DescriptionNLv2Center"
+                                android:layout_width="match_parent"
+                                android:layout_height="16dp"
+                                android:gravity="center"
+                                android:text="@string/visibility">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/text_visibility_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/visibility_placeholder">
+                            </TextView>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/accuracy_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/humidity"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/accuracy_icon"
+                                android:src="@drawable/icons_android_ic_accuracy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/text_accuracy"
+                                style="@style/DescriptionNLv2Center"
+                                android:layout_width="match_parent"
+                                android:layout_height="16dp"
+                                android:gravity="center"
+                                android:text="@string/accuracy">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/text_accuracy_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/_93"
+                                android:textSize="15sp">
+
+                            </TextView>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</RelativeLayout>
